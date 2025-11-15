@@ -8,6 +8,7 @@ from aiogram.enums import ParseMode
 from config.config import Config, load_config
 from handlers import start_hd, check_group_hd
 from middlewares.is_admin_mw import AdminCheckMiddleware
+from database.connect_db.autokavakaz_con import init_db
 
 
 logger = logging.getLogger(__name__)
@@ -22,6 +23,10 @@ async def main():
         format=config.log.format,
     )
     logger.info("Starting bot")
+    
+    logger.info("Starting connect db")
+    init_db()
+    logger.info("DataBase is connect")
 
     bot = Bot(
         token=config.bot.token,
