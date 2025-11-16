@@ -1,5 +1,5 @@
 from aiogram import Router
-from aiogram.types import Message, ChatMemberUpdated
+from aiogram.types import ChatMemberUpdated
 
 from owner_id.owner_id import OWNER_ID
 
@@ -7,6 +7,8 @@ from owner_id.owner_id import OWNER_ID
 check_group_router = Router()
 
 active_groups = set()
+active_groups.add(-5040734676)
+
 
 @check_group_router.my_chat_member()
 async def on_status_change(event: ChatMemberUpdated):
