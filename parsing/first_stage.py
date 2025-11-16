@@ -1,5 +1,8 @@
 from bs4 import BeautifulSoup
 
+from parsing import selenium_pars
+
+
 with open("parsing/index.html", encoding="utf-8") as file:
     src = file.read()
 
