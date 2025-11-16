@@ -2,12 +2,12 @@ from aiogram import Router
 from aiogram.types import ChatMemberUpdated
 
 from owner_id.owner_id import OWNER_ID
+from lexicon.lexicon import ID_GROUP
 
 
 check_group_router = Router()
 
-active_groups = set()
-active_groups.add(-5040734676)
+active_groups = ID_GROUP
 
 
 @check_group_router.my_chat_member()
